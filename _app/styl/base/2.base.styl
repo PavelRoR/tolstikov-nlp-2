@@ -4,7 +4,7 @@
 	outline none
 body
 	font-size: 18px
-	font-family: SUD
+	font-family: SUDL
 	color #000
 	background-color #fff
 	line-height: 1.5
@@ -60,16 +60,21 @@ footer
 		bottom 0
 		cursor pointer
 		margin 0 auto
-.button
-	display block
+.container
+	position relative
+	z-index 50
+.button-wrapper
 	text-align center
-	margin 0 auto
+.button
+	display inline-block
+	text-align center
+	margin 0
 	text-decoration none
 	color: #fff
-	width: 100%
-	max-width 261px
-	padding 18px 10px
+	width: auto
+	padding 18px 60px
 	background-color: cB
+	transition: all .3s ease
 	&:focus
 		text-decoration none
 		color #fff
@@ -79,7 +84,76 @@ footer
 		color #fff
 .general-title
 	font-size: 36px
+	font-family: SUDB
 	font-weight: bold
 	margin-bottom: 40px
 	&-center
 		text-align center
+.general-subtitle
+	margin 0 0 25px
+	font-family: SUDL
+	font-weight: 100
+	text-transform uppercase
+	color:  #ADADAD;
+	letter-spacing: 0.3em;
+.general-text
+	margin-bottom: 20px
+	span
+		color cB
+		font-family: SUDB
+		font-weight: bold
+	&:last-of-type
+		margin-bottom: 0
+hr
+	height 1px
+	border-top: 1px solid #D9D9D9;
+	margin 15px 0
+.general-img
+	position absolute
+.general-img-padded
+	position relative
+	// padding-top: 100%
+	img
+		position absolute
+.general-list
+	list-style: none;
+	li
+		padding 20px 0
+		border-bottom: 1px solid #D7D7D7;
+		display table
+		width 100%
+		font-family: SUDM
+		span
+			display table-cell
+			vertical-align middle
+			padding-left: 30px
+.general-ol-list
+	counter-reset: my-counter;
+	li
+		counter-increment: my-counter;
+		&:before
+			display table-cell
+			vertical-align middle
+			content: counter(my-counter)
+			font-size: 24px
+			font-weight: bold;
+			width 50px
+			height 50px
+			border-radius: 50%
+			border: 2px solid cB
+			line-height: 20px
+			text-align center
+			color cB
+.general-ul-list
+	li
+		position relative
+		&:before
+			content: ''
+			display block
+			position absolute
+			border-radius: 50%
+			background-color: cB
+			width 15px
+			height 15px
+			left 0
+			top calc(50% - 7.5px)

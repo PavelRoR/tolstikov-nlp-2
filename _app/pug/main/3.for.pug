@@ -1,0 +1,37 @@
+section#for
+	.container
+		+gt('general-title-center','Этот мастер-класс для Вас!')
+	.for-if
+		.container
+			img(src=path+"img/icons/dashes.png", alt="Изображение 1 блока").general-img.general-img-for-if-1
+			.row
+				.col-md-6
+					h4.general-subtitle Если Вы:
+					ol.general-list.general-ol-list
+						each item in ['Не знаете, как избавиться от чужого влияния','Устали от одиночества и непонимания','Не понимаете, за что хвататься','Вам надоели неприятности и проблемы','Страдаете от уныния и хронической усталости']
+							li
+								span=item
+				.col-md-6
+					.general-img-padded.general-img-padded-for-if
+						img(src=path+"img/images/reading.png", alt="Читающая девушка")
+	.for-wish
+		.container
+			img.general-img.general-img-for-wish-1(src=path+"img/icons/waves.png", alt="Волны")
+			img.general-img.general-img-for-wish-2(src=path+"img/icons/loop.png", alt="Закорючка")
+			h4.general-subtitle Хотите:
+			ol.general-list.general-ol-list
+				each item in ['Уметь противодействовать лжи и  манипуляциям','Найти верных друзей или вторую половину','Поверить в себя и добиться финансового успеха','Самому управлять своей судьбой и счастьем','Сохранить здоровье и радость на долгие годы','Уникальные вебинары, посвященные различным аспектам направления','Самые мощные техники воздействия на человека и его подсознание','Это возможность решить свои задачи','Помогать не только себе, но и другим людям','Начать зарабатывать на любимом деле','Мастер-класс даёт практические навыки']
+					li
+						span=item
+	.container
+		img.general-img.general-img-for-1(src=path+"img/icons/3-waves.png", alt="3 волны")
+		img.general-img.general-img-for-2(src=path+"img/icons/daggers.png", alt="Крестики")
+		.row
+			.col-md-8
+				p.general-text Интенсив будет Вам интересен, в первую очередь, потому, что 
+					span НЛП
+					|  и 
+					span гипноз
+					|  – одни из самых сильных и при этом простых способов воздействия на человека и его подсознание
+				p.general-text Нейролингвистическое программирование  признаётся широкой общественностью как социально адекватный и реальный феномен
+				+b('button-for',href,'Участвовать в мастер-классе')

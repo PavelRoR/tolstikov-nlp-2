@@ -1,0 +1,33 @@
+mixin mk(cl,h4,prak,...items)
+	.master-class-container(class=cl)
+		h4.general-subtitle.general-subtitle-plan=h4
+		ul.general-list.general-ul-list
+			each item in items
+				li
+					span=item
+		if prak
+			p.master-class-text Практика: 
+				span=prak
+
+section#plan
+	.container
+		img.general-img.general-img-plan-1(src=path+"img/icons/o.png", alt="О")
+		img.general-img.general-img-plan-2(src=path+"img/icons/4-corners.png", alt="Пирамидки")
+		+gt('general-title-center','Программа мастер-класса')
+		img.general-img.general-img-plan-3(src=path+"img/icons/dots.png", alt="Точки")
+		.master-classes
+			.master-class
+				h4.master-class-title.active Мастер-класс №1
+				+mk('master-class-container-1','Власть и очарование','Простейшие техники манипуляций','Как разоблачать лжецов и противодействовать их манипуляциям','Как читать мысли людей и очаровывать их за считанные секунды','Как влиять на сознание людей, чтобы получать от них желаемое')
+			.master-class
+				h4.master-class-title Мастер-класс №2
+				+mk('master-class-container-2','Исцеление с помощью гипноза','Гипнотическая медитация с установками на исцеление','Как избавиться от зависимости и вредных привычек','Как принять себя и обрести гармонию с миром','Самопрограммирование на здоровье и долголетие')
+			.master-class
+				h4.master-class-title Мастер-класс №3
+				+mk('master-class-container-3','Код богатства и установки на успех','"Мантра позитива" для хорошего настроения','Как избавиться от негативных установок на бедность и невезение','Как активировать свою гениальность и уверенность в себе','Психотехнологии для достижения целей и исполнения желаний')
+		.row
+			.col-md-7
+				p.general-text Благодаря техникам 
+					span работы с подсознанием
+					| , умению вводить транс и использовать методики внушения Вы сможете лучше узнать себя, свои возможности и гармонизировать свою жизнь
+				+b('button-plan',href,'Иду на мастер-класс')
