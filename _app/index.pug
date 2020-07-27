@@ -1,0 +1,37 @@
+-var path = '';
+-var head_url = 'https://tolstikov.mastervision.su/nlp-and-hypnosis-2/';
+-var head_title = '«Нейролингвистическое программирование и гипноз»';
+-var head_description = '3-дневный мастер-класс Виктора Толстикова';
+-var head_img = 'img/banner.jpg';
+-var styles = path+'css/styles.min.css';
+-var fav_ico = path+'favicon.ico';
+-var fav_png = path+'favicon.png';
+-var scripts = path+'js/scripts.min.js';
+-var action = '';
+-var group = '';
+-var formId = '';
+-var formVc = '';
+//- -var footer_title = true
+//- -var oferta = 'https://mastervision.su/oferta.docx'
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		include pug/head
+		include pug/scripts/head_scripts
+	body
+		include pug/scripts/body_top_scripts
+		include pug/base/1.header.pug
+		include pug/main/1.main.pug
+		include pug/main/2.video.pug
+		include pug/main/3.for.pug
+		include pug/main/4.plan.pug
+		include pug/main/5.lets.pug
+		include pug/main/6.author.pug
+		include pug/main/7.revs.pug
+		include pug/main/8.last.pug
+		include pug/base/2.footer.pug
+		include pug/main/9.modal.pug
+		include pug/base/3.scripts.pug
+		//- include pug/scripts/chat
+		include pug/scripts/body_bottom_scripts
