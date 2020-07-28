@@ -1,0 +1,60 @@
+-var path = '../';
+-var head_url = 'https://tolstikov.mastervision.su/nlp-and-hypnosis-2/promo/';
+-var head_title = 'Оставьте свои данные, чтобы скачать методичку';
+-var styles = '../css/promo.min.css';
+-var fav_ico = '../favicon.ico'
+-var fav_png = '../favicon.png'
+-var scripts = path+'js/promo.min.js';
+-var action = 'https://shop.mv-centr.ru/?r=personal/newsletter/data/add&id=25863&lg=ru';
+//- -var group = '';
+-var formId = '149';
+-var formVc = '2027603663';
+-var footer_title = true
+//- -var oferta = 'https://mastervision.su/oferta.docx'
+//- -var href = '#Modal';
+
+mixin gt(cl,h3)
+	h3.general-title(class=cl)=h3
+mixin b(cl,href,p,target,id)
+	a.button.button-up(class=cl href=href target=target id=id)=p
+	
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		include pug/head
+		include pug/scripts/head_scripts
+	body
+		include pug/scripts/body_top_scripts
+		section#main
+			.container
+				img.general-img.general-img-main-1(src=path+"img/icons/dashes.png", alt="Черточки")
+				img.general-img.general-img-main-2(src=path+"img/icons/signa.png", alt="Роспись")
+				include pug/base/1.header.pug
+				h1.main-title Оставьте свои данные, чтобы скачать методичку. Она поможет вам максимально эффективно работать на уроках
+					//- span «5 принципов работы трав»
+					//- | Она поможет вам максимально эффективно освоить один из инструментов, с которым познакомитесь на уроках
+				form(action=action method="post" enctype="application/x-www-form-urlencoded" accept-charset="UTF-8" ).form.form-promo
+					.inputrow
+						.inputblock
+							input(type="hidden" value="1" name="required_fields[phone_number]")
+							input(class="input input-mail" name="Contact[phone_number]" type="text" placeholder="Ваш телефон")
+					button(type="submit").button.button-form Получить методичку
+						br
+						| и завершить регистрацию
+					.clearfix
+					p.alert-message
+					.checking
+						input(type="checkbox" id="check" checked).check
+						label(for="check").check-label Я согласен с 
+							a(href="https://mastervision.su/politics.pdf" target="_blank") условиями обработки
+							|  персональных данных по 152 - Ф3
+					div(style="display: none;")
+						div#formTypeSpecificVars(style="display: none;")
+						<!-- API код канала рекламы --> 
+						input(type="hidden" value="0" name="Contact[id_advertising_channel_page]")#form_newsletter_id_advertising_channel_page
+						input(type="hidden" name="formId" value=formId)
+						input(type="hidden" name="formVc" value=formVc)
+				.clearfix
+		include pug/base/2.footer.pug
+		include pug/base/3.scripts.pug
+		include pug/scripts/body_bottom_scripts

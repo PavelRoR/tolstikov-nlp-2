@@ -1,0 +1,32 @@
+-var path = '../';
+-var head_title = 'Медитативная практика «Глубокое расслабление через осознанное дыхание»';
+-var head_description = 'Бонус от Виктора Толстикова';
+-var styles = '../css/bonus.min.css';
+-var fav_ico = '../favicon.ico'
+-var fav_png = '../favicon.png'
+-var footer_title = true
+	
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		include pug/head
+		include pug/scripts/head_scripts
+	body
+		include pug/scripts/body_top_scripts
+		section#main
+			.container
+				include pug/base/1.header.pug
+				.row
+					.col-md-6
+						p.main-text=head_description
+						h1.main-title Медитативная практика 
+							span «Глубокое расслабление через осознанное дыхание»
+						audio(controls)
+							source(src="../audio/bonus.ogg" type="audio/ogg")
+							source(src="../audio/bonus.mp3" type="audio/mpeg")
+							<a href="../audio/bonus.mp3" download>Скачать бонус</a>
+					.col-md-6
+						.main-img
+							img(src=path+"img/images/meditating.png", alt="Медитация")
+		include pug/base/2.footer.pug
+		include pug/scripts/body_bottom_scripts

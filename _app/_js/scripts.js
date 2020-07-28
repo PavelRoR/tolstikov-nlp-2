@@ -125,6 +125,13 @@ $(document).ready(function () {
             enabled: true
         }
     });
+    $('.cert-link').magnificPopup({
+        type: 'image',
+        mainClass: 'mfp-fade',
+        gallery: {
+            enabled: true
+        }
+    });
     /* Видео */
     $(".video-wrapper-rev img").click(function () {
         var a = $(this).parent().attr("data-youtube");

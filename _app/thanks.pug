@@ -1,0 +1,24 @@
+-var path = '../';
+-var head_title = 'Вы зарегистрированы на мастер-класс «Нейролингвистическое программирование и гипноз»';
+-var styles = '../css/promo.min.css';
+-var fav_ico = '../favicon.ico'
+-var fav_png = '../favicon.png'
+-var footer_title = true
+	
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		include pug/head
+		include pug/scripts/head_scripts
+	body
+		include pug/scripts/body_top_scripts
+		section#main
+			.container
+				img.general-img.general-img-main-1(src=path+"img/icons/waves.png", alt="Черточки")
+				img.general-img.general-img-main-2(src=path+"img/icons/loop.png", alt="Роспись")
+				include pug/base/1.header.pug
+				h1.main-title Вы зарегистрированы на мастер-класс 
+					span «Нейролингвистическое программирование и гипноз»
+				a.button.button-thanks(href='https://drive.google.com/file/d/11oAPeSFiZss_H2qsBCqrDyDv5LPP5Nu-/view' target="_blank") Скачать методичку
+		include pug/base/2.footer.pug
+		include pug/scripts/body_bottom_scripts

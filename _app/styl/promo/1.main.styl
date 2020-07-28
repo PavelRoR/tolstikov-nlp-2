@@ -1,0 +1,150 @@
+#main
+	padding 0 0 60px
+	min-height calc(100vh - 149px)
+	overflow hidden
+	text-align center
+.general-img-main-1
+	top 200px
+	left -220px
+.general-img-main-2
+	bottom:  0
+	right -320px
+.main-title
+	font-size: 26px
+	font-family: SUDM
+	margin-bottom: 30px
+	span
+		display block
+		font-family: SUDB
+		font-weight: bold
+		color cB
+.intl-tel-input
+	display block
+	margin 0 auto 10px
+	width 100%
+	max-width 320px
+.input
+	border: 1px solid #000000;
+	width 100%
+	display block
+	padding 16px 10px
+@-webkit-keyframes autofill
+	to
+		font-size: 18px
+		color: #000;
+		background-color: #fff
+input:-webkit-autofill
+	-webkit-animation-name: autofill;
+	-webkit-animation-fill-mode: both;
+.button-form
+	display: block
+	padding 18px 10px
+	width: 100%
+	max-width 320px
+	margin 0 auto
+.alert-message {
+	clear both
+	display: none;
+	font-size: 16px;
+	padding-top: 10px;
+	color: #f00
+	text-align: center
+	font-family: SUDM
+	line-height: 1
+}
+.checking {
+	display: table;
+	width 100%
+	max-width 320px
+	margin: 5px auto 0
+	text-align: left
+}
+.checking-main
+	margin-left: 0
+.checking .check-label {
+	line-height: 18px;
+	cursor: pointer;
+	position: relative;
+	display: table-cell;
+	vertical-align: middle;
+	padding: 0 0 0 40px;
+	text-align: left;
+	font-size: 12px
+	font-weight: 100
+	color #5c5b5b
+}
+
+.checking .check-label a
+	text-decoration: none
+	border-bottom: 1px dashed
+	display: inline
+	color #5c5b5b
+	&:focus
+		border-bottom: 1px dashed
+		color #5c5b5b
+	&:hover
+		border-bottom: none
+		text-decoration: none
+		color #5c5b5b
+
+.checking .check-label:before {
+	content: '';
+	background-color: cB
+	position: absolute;
+	left: 0;
+	top: 3px;
+	width: 31px;
+	height: 31px;
+	border none
+	border-radius: 0
+}
+
+.checking .check-label:after {
+	content: '';
+	position: absolute;
+	left: 10px;
+	top: -10px;
+	width: 11px;
+	height: 18px;
+	background-color: transparent;
+	opacity: 0;
+	border-bottom: 2px solid #fff
+	border-right: 2px solid #fff
+	-webkit-transform: rotate(41deg);
+	-ms-transform: rotate(41deg);
+	transform: rotate(41deg);
+	-webkit-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+
+}
+
+.check {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	width: 0;
+	height 0;
+	border: 0;
+	left -99999px;
+}
+
+.check:checked + .check-label:before {
+	background-color: cB
+
+}
+
+.check:checked + .check-label:after {
+	opacity: 1;
+	top: 7px;
+	-webkit-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+::-webkit-input-placeholder {color:#000; opacity:1;}/* webkit */
+::-moz-placeholder          {color:#000; opacity:1;}/* Firefox 19+ */
+:-moz-placeholder           {color:#000; opacity:1;}/* Firefox 18- */
+:-ms-input-placeholder      {color:#000; opacity:1;}/* IE */
+
+.intl-tel-input .country-list
+	width 320px
