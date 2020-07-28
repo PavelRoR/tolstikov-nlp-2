@@ -105,18 +105,7 @@ $(document).ready(function () {
         margin: 10,
         nav: true,
         navText: ["←", "→"],
-        dots: false,
-        responsive: {
-            0: {
-                items: 1
-            },
-            709: {
-                items: 2
-            },
-            1000: {
-                items: 3
-            }
-        }
+        dots: false
     });
     $('.text-rev-link').magnificPopup({
         type: 'image',

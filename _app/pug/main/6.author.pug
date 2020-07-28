@@ -2,16 +2,16 @@ section#author
 	.container
 		img(src=path+"img/icons/dashes-2.png", alt="Черточки").general-img.general-img-author
 		.row
-			.col-md-6
+			.col-md-6.col-md-push-6
+				.general-img-padded.general-img-padded-author
+					img(src=path+"img/images/victor.png", alt="Виктор Толстиков")
+			.col-md-6.col-md-pull-6
 				h4.general-subtitle О тренере
 				h3.author-title Виктор Толстиков
 				ul.general-list.general-ul-list.general-ul-list-author
 					each item in ['НЛП-тренер международного уровня','Инструктор по славянской системе «Ведасонь»','Ведущий авторских курсов и тренингов','Автор книг и ряда уникальных методик','Постоянный гость на ведущих телеканалах']
 						li
 							span=item
-			.col-md-6
-				.general-img-padded.general-img-padded-author
-					img(src=path+"img/images/victor.png", alt="Виктор Толстиков")
 		.author-certs
 			h4.general-subtitle Сертификаты тренера
 			//- .owl-carousel.owl-theme#certs
