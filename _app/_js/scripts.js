@@ -1,5 +1,7 @@
 //@prepros-prepend jquery-2.1.1.min.js
-//@prepros-prepend jquery.fancybox.min.js
+/*@prepros-prepend jquery.fancybox.min.js */
+//@prepros-prepend owl.carousel.min.js
+//@prepros-prepend popup.js
 
 $(document).ready(function () {
     $(function () {
@@ -87,12 +89,61 @@ $(document).ready(function () {
             message.slideUp(500);
         });
     });
-    $('.button-up').fancybox();
+    // $('.button-up').fancybox();
+    $('.button-up').magnificPopup({
+        type: 'inline',
+        midClick: true, // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+        mainClass: 'mfp-fade'
+    });
     $('.master-class-title').click(function () {
-        $('.master-class-title').removeClass('active');
+        $('.master-class-title').removeClass('active');;
         $('.master-class-container').slideUp(500);
         $(this).addClass('active').next().slideDown(500);
     });
-
+    $('#video-revs, #text-revs').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        navText: ["←", "→"],
+        dots: false,
+        responsive: {
+            0: {
+                items: 1
+            },
+            709: {
+                items: 2
+            },
+            1000: {
+                items: 3
+            }
+        }
+    });
+    $('.text-rev-link').magnificPopup({
+        type: 'image',
+        mainClass: 'mfp-fade',
+        gallery: {
+            enabled: true
+        }
+    });
+    /* Видео */
+    $(".video-wrapper-rev img").click(function () {
+        var a = $(this).parent().attr("data-youtube");
+        $(this).parent().html('<iframe src="https://www.youtube.com/embed/' + a + '?showinfo=0&rel=0&autoplay=1&modestbranding=1&mute=1&showinfo=0&rel=0" allowfullscreen></iframe>')
+    });
+    $(function () {
+        $('#video-revs .owl-prev, #video-revs .owl-next').click(function () {
+            $('.video-wrapper-rev iframe').each(function () {
+                var l = $(this).parent().attr('data-img');
+                $(this).parent().html('<img src="' + l + '" alt="Видео отзыв">');
+            });
+            $(".video-wrapper-rev img").click(function () {
+                var a = $(this).parent().attr("data-youtube");
+                $(this).parent().html('<iframe src="https://www.youtube.com/embed/' + a + '?modestbrandig=1&mute=1&showinfo=0&rel=0&autoplay=1" allowfullscreen></iframe>');
+            });
+        });
+    })
+    $('#video-revs .owl-next').click(function () {
+        $(this).parent().parent().removeClass('toLeft');
+    })
     /*Конец документа*/
 });

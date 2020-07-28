@@ -1,5 +1,14 @@
-//- https://youtu.be/AWpEmtLhoSs
-//- https://youtu.be/Cl8G2M8h1G4
-//- https://youtu.be/FCeeM4u5Cmc
-//- https://youtu.be/cygSlkrU_l4
-//- https://youtu.be/GeCUbAS4G3Y
+#revs
+	.container
+		img.general-img.general-img-revs-1(src=path+"img/icons/4-corners.png", alt="Пирамидки")
+		img.general-img.general-img-revs-2(src=path+"img/icons/3-waves.png", alt="3 волны")
+		+gt('','Видео-отзывы')
+		.owl-carousel.owl-theme#video-revs
+			each v,n in {1:'AWpEmtLhoSs',2:'Cl8G2M8h1G4',3:'FCeeM4u5Cmc',4:'cygSlkrU_l4',5:'GeCUbAS4G3Y'}
+				.video-wrapper.video-wrapper-rev(data-youtube=v data-img=path+"img/revs/video-"+n+".jpg")
+					img(src=path+"img/revs/video-"+n+".jpg", alt="Отзыв "+ n)
+		+gt('','Текстовые отзывы')
+		.owl-carousel.owl-theme#text-revs.toLeft
+				each i in [1,2,3,4,5,6,7]
+					a(href=path+"img/revs/text-"+ i + ".jpg").text-rev-link
+						img(src=path+"img/revs/text-"+ i + ".jpg", alt="Текстовый отзыв "+i).text-rev-img

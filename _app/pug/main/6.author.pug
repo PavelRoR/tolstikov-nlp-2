@@ -14,3 +14,9 @@ section#author
 					img(src=path+"img/images/victor.png", alt="Виктор Толстиков")
 		.author-certs
 			h4.general-subtitle Сертификаты тренера
+			//- .owl-carousel.owl-theme#certs
+			.row
+				each i in [1,2,3,4]
+					.col-md-3.col-sm-3.col-xs-6
+						a(href=path+"img/certs/cert-"+ i + ".jpg").cert-link
+							img(src=path+"img/certs/cert-"+ i + ".min.jpg", alt="Сертификат "+i).cert-img
