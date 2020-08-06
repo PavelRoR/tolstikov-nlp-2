@@ -1,0 +1,143 @@
+-var full_1 = '10 900р.';
+-var full_2 = '21 900р.';
+-var full_3 = '32 900р.';
+
+-var sale_1 = '1 000р.';
+-var sale_2 = '2 000р.';
+-var sale_3 = '3 000р.';
+
+-var today_1 = '9 900р.';
+-var today_2 = '19 900р.';
+-var today_3 = '29 900р.';
+
+-var link_1 = 'https://shop.mv-centr.ru/?r=ordering/cart/as1&id=341&clean=true&lg=ru';
+-var link_2 = 'https://shop.mv-centr.ru/?r=ordering/cart/as1&id=344&clean=true&lg=ru';
+-var link_3 = 'https://shop.mv-centr.ru/?r=ordering/cart/as1&id=347&clean=true&lg=ru';
+
+-var prepLink = 'https://shop.mv-centr.ru/?r=ordering/cart/as1&id=350&clean=true&lg=ru';
+
+section#prices
+	.container
+		img.general-img.general-img-prices-1(src=path+"img/icons/dots.png", alt="Точки")
+		img.general-img.general-img-prices-2(src=path+"img/icons/4-corners.png", alt="Пирамидки")
+		img.general-img.general-img-prices-3(src=path+"img/icons/dots.png", alt="Точки")
+		img.general-img.general-img-prices-4(src=path+"img/icons/dots.png", alt="Точки")
+		+gt('','Выбрать свой пакет участия:')
+		.row
+			.col-md-4
+				.packet
+					.packet-head
+						h4.packet-head-title ДУША КОМПАНИИ
+							br
+							| (ОБЩЕНИЕ И ВЛИЯНИЕ)
+					.packet-body
+						ul.packet-body-list
+							li Научитесь общаться
+							li Найдёте верных друзей
+							li Наладите отношения
+							li Сможете влиять на людей
+							li Противодействовать манипуляциям
+						p.packet-body-text Учебная площадка
+						p.packet-body-text 
+							span 4 занятия
+							|  по НЛП
+						p.packet-body-text 
+							span 4 занятия
+							|  по Гипнозу
+						p.packet-body-text Проверка ДЗ
+						p.packet-body-text Ответы на вопросы текстом в ЛК
+						h5.packet-body-bonus-title Бонусы:
+						ul.packet-body-bonus-list
+							li МК “Закон притяжения”
+					.packet-footer
+						p.cost.cost-full Стоимость:
+							span=full_1
+						p.cost.cost-sale Скидка:
+							span#sale-1=sale_1
+						p.cost.cost-today Стоимсоть сегодня:
+							span#today-1=today_1
+						+b2('',link_1,'Купить','_blank','link-1')
+			.col-md-4
+				.packet
+					.packet-head
+						h4.packet-head-title ГИПНОТИЗЁР
+							br
+							| (ТРАНСФОРМАЦИЯ)
+					.packet-body
+						ul.packet-body-list
+							li Раскроете способности
+							li Избавитесь от страхов и негативных установок
+							li Освоите скрытый гипноз
+							li Исцелитесь от болезней и вредных привычек
+						p.packet-body-text Учебная площадка
+						p.packet-body-text 
+							span 8 занятия
+							|  по НЛП
+						p.packet-body-text 
+							span 8 занятия
+							|  по Гипнозу
+						p.packet-body-text Проверка ДЗ
+						p.packet-body-text Ответы на вопросы текстом в ЛК
+						p.packet-body-text-else + Вебинар с ответами по НЛП и гипнозу (каждую неделю - 3 мес)
+						p.packet-body-text-else + Закрытый чат по НЛП и гипнозу
+						p.packet-body-text-else + Сертификат по НЛП и гипнозу
+						h5.packet-body-bonus-title Бонусы:
+						ul.packet-body-bonus-list
+							li МК “Закон притяжения”
+							li Курс “Снижение веса”
+					.packet-footer
+						p.cost.cost-full Стоимость:
+							span=full_2
+						p.cost.cost-sale Скидка:
+							span#sale-2=sale_2
+						p.cost.cost-today Стоимсоть сегодня:
+							span#today-2=today_2
+						+b2('',link_2,'Купить','_blank','link-2')
+			.col-md-4
+				.packet
+					.packet-head
+						h4.packet-head-title КОУЧ-КОНСУЛЬТАНТ
+							br
+							| (КОНСУЛЬТИРОВАНИЕ)
+					.packet-body
+						ul.packet-body-list
+							li Освоите новую профессию
+							li Обретёте предназначение помогать людям
+							li Получите источник дохода на любимом деле
+						p.packet-body-text Учебная площадка
+						p.packet-body-text 8 занятия по НЛП
+						p.packet-body-text 8 занятия по Гипнозу
+						p.packet-body-text 
+							span 8 занятий “Коучинг и консультирование”
+						p.packet-body-text Проверка ДЗ
+						p.packet-body-text Ответы на вопросы текстом в ЛК
+						p.packet-body-text-else Вебинар с ответами по НЛП и гипнозу (каждую неделю - 3 мес)
+						p.packet-body-text-else Закрытый чатпо НЛП и гипнозу
+						p.packet-body-text-else Сертификат по НЛП и гипнозу
+						p.packet-body-text-else + Вебинар с ответами по консультированию (каждую неделю - 3 мес)
+						p.packet-body-text-else + Закрытый чат по консультированию
+						p.packet-body-text-else + Сертификат по консультированию
+						h5.packet-body-bonus-title Бонусы:
+						ul.packet-body-bonus-list
+							li МК “Закон притяжения”
+							li Курс “Снижение веса”
+							li МК “Эзотерика денег”
+					.packet-footer
+						p.cost.cost-full Стоимость:
+							span=full_3
+						p.cost.cost-sale Скидка:
+							span#sale-3=sale_3
+						p.cost.cost-today Стоимсоть сегодня:
+							span#today-3=today_3
+						+b2('',link_3,'Купить','_blank','link-3')
+		.prepayment
+			h4.prepayment-title Акция!!!
+			p.prepayment-text Платите 1 000р., бонусом получаете 
+				span#prepayment-bonus 1 000р. 
+				br
+				| На счет зачисляется 
+				span#prepayment-credited 2 000р.
+			+b2('',prepLink,'Оплатить 1 000р.','_blank','prepayment-link')
+		.timer
+			h4.timer-title Скидка уменьшится через:
+			.clock
