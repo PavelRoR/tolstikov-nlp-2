@@ -23,11 +23,20 @@ $(document).ready(function () {
         }
     });
     $('#video-revs, #text-revs').owlCarousel({
+        items: 3,
         loop: true,
         margin: 10,
         nav: true,
         navText: ["←", "→"],
-        dots: false
+        dots: false,
+        responsive: {
+            0: {
+                items: 2
+            },
+            767: {
+                items: 3
+            }
+        }
     });
     $('.text-rev-link').magnificPopup({
         type: 'image',
@@ -47,53 +56,53 @@ $(document).ready(function () {
     $(function () {
         var clock;
         var dates = new Array(
-            new Date("August 6, 2020 00:00 UTC+3"),
-            new Date("August 7, 2020 00:00 UTC+3"),
-            new Date("August 8, 2020 00:00 UTC+3")
+            new Date("August 11, 2020 00:00 UTC+3"),
+            new Date("August 12, 2020 00:00 UTC+3"),
+            new Date("August 13, 2020 00:00 UTC+3")
         );
 
         var currentDate = new Date();
 
         var sale1 = {
             name: $('#sale-1'),
-            saleText: new Array('1 000р.')
+            saleText: new Array('500р.')
         };
         var sale2 = {
             name: $('#sale-2'),
-            saleText: new Array('2 000р.')
+            saleText: new Array('1 000р.')
         };
         var sale3 = {
             name: $('#sale-3'),
-            saleText: new Array('2 000р.')
+            saleText: new Array('1 500р.')
         };
         var today1 = {
             name: $('#today-1'),
-            todayText: new Array('12 900р.')
+            todayText: new Array('10 400р.')
         };
         var today2 = {
             name: $('#today-2'),
-            todayText: new Array('27 900р.')
+            todayText: new Array('20 900р.')
         };
         var today3 = {
             name: $('#today-3'),
-            todayText: new Array('35 900р.')
+            todayText: new Array('31 400р.')
         };
         var link1 = {
             name: $('#link-1'),
-            linkText: new Array('https://shop.mv-centr.ru/?r=ordering/cart/as1&id=313&clean=true&lg=ru', 'https://shop.mv-centr.ru/?r=ordering/cart/as1&id=314&clean=true&lg=ru')
+            linkText: new Array('https://shop.mv-centr.ru/?r=ordering/cart/as1&id=342&clean=true&lg=ru', 'https://shop.mv-centr.ru/?r=ordering/cart/as1&id=343&clean=true&lg=ru')
         };
         var link2 = {
             name: $('#link-2'),
-            linkText: new Array('https://shop.mv-centr.ru/?r=ordering/cart/as1&id=316&clean=true&lg=ru', 'https://shop.mv-centr.ru/?r=ordering/cart/as1&id=317&clean=true&lg=ru')
+            linkText: new Array('https://shop.mv-centr.ru/?r=ordering/cart/as1&id=345&clean=true&lg=ru', 'https://shop.mv-centr.ru/?r=ordering/cart/as1&id=346&clean=true&lg=ru')
         };
         var link3 = {
             name: $('#link-3'),
-            linkText: new Array('https://shop.mv-centr.ru/?r=ordering/cart/as1&id=319&clean=true&lg=ru', 'https://shop.mv-centr.ru/?r=ordering/cart/as1&id=320&clean=true&lg=ru')
+            linkText: new Array('https://shop.mv-centr.ru/?r=ordering/cart/as1&id=348&clean=true&lg=ru', 'https://shop.mv-centr.ru/?r=ordering/cart/as1&id=349&clean=true&lg=ru')
         };
 
         var prepLink = {
             name: $('#prepayment-link'),
-            linkText: new Array('https://shop.mv-centr.ru/?r=ordering/cart/as1&id=323&clean=true&lg=ru', 'https://shop.mv-centr.ru/?r=ordering/cart/as1&id=324&clean=true&lg=ru')
+            linkText: new Array('https://shop.mv-centr.ru/?r=ordering/cart/as1&id=351&clean=true&lg=ru', 'https://shop.mv-centr.ru/?r=ordering/cart/as1&id=352&clean=true&lg=ru')
         };
 
         if (currentDate < dates[0]) {
@@ -105,16 +114,16 @@ $(document).ready(function () {
                 language: 'ru',
                 callbacks: {
                     stop: function () {
-                        // sale1.name.text(sale1.saleText[0]);
-                        // sale2.name.text(sale2.saleText[0]);
-                        // sale3.name.text(sale3.saleText[0]);
-                        // today1.name.text(today1.todayText[0]);
-                        // today2.name.text(today2.todayText[0]);
-                        // today3.name.text(today3.todayText[0]);
-                        // link1.name.attr('href', link1.linkText[0]);
-                        // link2.name.attr('href', link2.linkText[0]);
-                        // link3.name.attr('href', link3.linkText[0]);
-                        // prepLink.name.attr('href', prepLink.linkText[0]);
+                        sale1.name.text(sale1.saleText[0]);
+                        sale2.name.text(sale2.saleText[0]);
+                        sale3.name.text(sale3.saleText[0]);
+                        today1.name.text(today1.todayText[0]);
+                        today2.name.text(today2.todayText[0]);
+                        today3.name.text(today3.todayText[0]);
+                        link1.name.attr('href', link1.linkText[0]);
+                        link2.name.attr('href', link2.linkText[0]);
+                        link3.name.attr('href', link3.linkText[0]);
+                        prepLink.name.attr('href', prepLink.linkText[0]);
                     }
                 }
             });
@@ -127,12 +136,12 @@ $(document).ready(function () {
                 language: 'ru',
                 callbacks: {
                     stop: function () {
-                        // $('.timer,  .cost-sale, .cost-today').remove();
-                        // $('.cost-full span').addClass('unbroken');
-                        // link1.name.attr('href', link1.linkText[1]);
-                        // link2.name.attr('href', link2.linkText[1]);
-                        // link3.name.attr('href', link3.linkText[1]);
-                        // prepLink.name.attr('href', prepLink.linkText[1]);
+                        $('.timer,  .cost-sale, .cost-today').remove();
+                        $('.cost-full span').addClass('unbroken');
+                        link1.name.attr('href', link1.linkText[1]);
+                        link2.name.attr('href', link2.linkText[1]);
+                        link3.name.attr('href', link3.linkText[1]);
+                        prepLink.name.attr('href', prepLink.linkText[1]);
                     }
                 }
             });
@@ -145,8 +154,8 @@ $(document).ready(function () {
                 language: 'ru',
                 callbacks: {
                     stop: function () {
-                        // $('.prepayment, .timer,  .cost-sale, .cost-today').remove();
-                        // $('.cost-full span').addClass('unbroken');
+                        $('.prepayment, .timer,  .cost-sale, .cost-today').remove();
+                        $('.cost-full span').addClass('unbroken');
                     }
                 }
             });

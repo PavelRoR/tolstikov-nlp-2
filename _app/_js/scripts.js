@@ -13,23 +13,23 @@ $(document).ready(function () {
             switch_text = $('.switch-text'),
             currDate = new Date(),
             startDate = new Array(
-                new Date("June 24 2020 18:30 UTC+3"),
-                new Date("June 25 2020 18:30 UTC+3"),
-                new Date("June 26 2020 18:30 UTC+3")),
+                new Date("August 10 2020 18:30 UTC+3"),
+                new Date("August 11 2020 18:30 UTC+3"),
+                new Date("August 12 2020 18:30 UTC+3")),
             endDate = new Array(
-                new Date("June 24 2020 21:00 UTC+3"),
-                new Date("June 25 2020 21:00 UTC+3"),
-                new Date("June 26 2020 21:00 UTC+3")),
+                new Date("August 10 2020 21:00 UTC+3"),
+                new Date("August 11 2020 21:00 UTC+3"),
+                new Date("August 12 2020 21:00 UTC+3")),
             rooms = new Array(
-                'https://pruffme.com/landing/u8937/tmp1592562341',
-                'https://pruffme.com/landing/u8937/tmp1592562341',
-                'https://pruffme.com/landing/u8937/tmp1592562341');
+                'https://start.bizon365.ru/room/18087/NLP_hypnosis_d1',
+                'https://start.bizon365.ru/room/18087/NLP_hypnosis_d2',
+                'https://start.bizon365.ru/room/18087/NLP_hypnosis_d3');
 
         function roomSwitch() {
-            $('.form-main').addClass('switch-form');
-            switch_title.html('А Вы записались на БЕСПЛАТНЫЙ ВЕБИНАР?<br>ЖДЕМ ТОЛЬКО ВАС!').css('lineHeight', '1.2');
+            $('.form-main').addClass('switched-form');
+            switch_title.addClass('switched').html('А Вы записались на БЕСПЛАТНЫЙ ВЕБИНАР?<br>ЖДЕМ ТОЛЬКО ВАС!').css('lineHeight', '1.2');
             switch_text.removeClass('hide').html('<span class="hurryup">Скорее ЗАХОДИТЕ прямо СЕЙЧАС на вебинар!</span>');
-            button.text('Зайти!');
+            button.text('Зайти!').css('minWidth', '260px');
         }
         if ((currDate > startDate[0] && currDate < endDate[0]) || (currDate > startDate[1] && currDate < endDate[1]) || (currDate > startDate[2] && currDate < endDate[2])) {
             roomSwitch();
@@ -105,7 +105,15 @@ $(document).ready(function () {
         margin: 10,
         nav: true,
         navText: ["←", "→"],
-        dots: false
+        dots: false,
+        responsive: {
+            0: {
+                items: 2
+            },
+            767: {
+                items: 3
+            }
+        }
     });
     $('.text-rev-link').magnificPopup({
         type: 'image',

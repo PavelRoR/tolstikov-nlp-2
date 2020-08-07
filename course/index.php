@@ -1,3 +1,4 @@
+<?php require_once('vars.php');?>
 <!DOCTYPE html>
 <html lang="ru">
   <head>
@@ -38,7 +39,7 @@
           <div class="col-md-6">
             <h1 class="main-title"><small>обучающий курс</small>Нейролингвистическое программирование и гипноз</h1>
             <hr/>
-            <p class="main-info">Старт курса: <span>20 августа, 19:00 (мск)</span></p>
+            <p class="main-info">Старт курса: <span>17 августа, 19:00 (мск)</span></p>
             <p class="main-info">Автор курса: <span>Виктор Толстиков</span></p><a class="button" href="#prices">Записаться</a>
           </div>
           <div class="col-md-6">
@@ -93,8 +94,8 @@
       <div class="container"><img class="general-img general-img-plan-1" src="../img/icons/4-corners.png" alt="Пирамидки"/><img class="general-img general-img-plan-2" src="../img/icons/daggers.png" alt="Крестики"/><img class="general-img general-img-plan-3" src="../img/icons/dots.png" alt="Точки"/>
         <h3 class="general-title general-title-center">Программа курса</h3>
         <div class="module module-1"><img class="general-img general-img-module-1-1" src="../img/icons/o.png" alt="Роспись"/>
-          <h4 class="module-title active">НЛП - Часть 1 - “Душа Компании”</h4>
-          <div class="module-item-container module-item-container-1">
+          <h4 class="module-title">НЛП - Часть 1 - “Душа Компании”</h4>
+          <div class="module-item-container">
                 <div class="module-item">
                   <h5 class="module-item-title">Занятие 1 “Введение в НЛП”</h5>
                   <ul class="general-list general-ul-list">
@@ -165,8 +166,8 @@
           </div>
         </div>
         <div class="module module-2"><img class="general-img general-img-module-2-1" src="../img/icons/signa-2.png" alt="Роспись 2"/><img class="general-img general-img-module-2-2" src="../img/icons/waves.png" alt="3 волны"/>
-          <h4 class="module-title active">ГИПНОЗ - Часть 1 - “Душа Компании”</h4>
-          <div class="module-item-container module-item-container-1">
+          <h4 class="module-title">ГИПНОЗ - Часть 1 - “Душа Компании”</h4>
+          <div class="module-item-container">
                 <div class="module-item">
                   <h5 class="module-item-title">Занятие 1 “Введение в гипноз”</h5>
                   <ul class="general-list general-ul-list">
@@ -237,8 +238,8 @@
           </div>
         </div>
         <div class="module module-3"><img class="general-img general-img-module-3-1" src="../img/icons/dots.png" alt="Точки"/><img class="general-img general-img-module-3-2" src="../img/icons/dashes.png" alt="Черточки"/><img class="general-img general-img-module-3-3" src="../img/icons/4-corners.png" alt="Пирамидки"/>
-          <h4 class="module-title active">КОУЧИНГ и КОНСУЛЬТИРОВАНИЕ</h4>
-          <div class="module-item-container module-item-container-1">
+          <h4 class="module-title">КОУЧИНГ и КОНСУЛЬТИРОВАНИЕ</h4>
+          <div class="module-item-container">
                 <div class="module-item">
                   <h5 class="module-item-title">Занятие 1 “Работа со своими ограничениями”</h5>
                   <ul class="general-list general-ul-list">
@@ -386,9 +387,15 @@
                 </ul>
               </div>
               <div class="packet-footer">
+              <?php if($now < $dates[1]) {;?>
                 <p class="cost cost-full">Стоимость:<span>10 900р.</span></p>
-                <p class="cost cost-sale">Скидка:<span id="sale-1">1 000р.</span></p>
-                <p class="cost cost-today">Стоимсоть сегодня:<span id="today-1">9 900р.</span></p><a class="button button-cost" href="https://shop.mv-centr.ru/?r=ordering/cart/as1&amp;id=341&amp;clean=true&amp;lg=ru" target="_blank" id="link-1">Купить</a>
+                <p class="cost cost-sale">Скидка:<span id="sale-1"><?=$sale1;?></span></p>
+                <p class="cost cost-today">Стоимость сегодня:<span id="today-1"><?=$today1;?></span></p>
+                <a class="button button-cost" href="<?=$link1;?>" target="_blank" id="link-1">Купить</a>
+                <?php } else {;?>
+                  <p class="cost cost-full">Стоимость:<span class="unbroken">10 900р.</span></p>
+                  <a class="button button-cost" href="<?=$link1;?>" target="_blank">Купить</a>
+                  <?php } ;?>
               </div>
             </div>
           </div>
@@ -419,9 +426,15 @@
                 </ul>
               </div>
               <div class="packet-footer">
+              <?php if($now < $dates[1]) {;?>
                 <p class="cost cost-full">Стоимость:<span>21 900р.</span></p>
-                <p class="cost cost-sale">Скидка:<span id="sale-2">2 000р.</span></p>
-                <p class="cost cost-today">Стоимсоть сегодня:<span id="today-2">19 900р.</span></p><a class="button button-cost" href="https://shop.mv-centr.ru/?r=ordering/cart/as1&amp;id=344&amp;clean=true&amp;lg=ru" target="_blank" id="link-2">Купить</a>
+                <p class="cost cost-sale">Скидка:<span id="sale-2"><?=$sale2;?></span></p>
+                <p class="cost cost-today">Стоимость сегодня:<span id="today-2"><?=$today2;?></span></p>
+                <a class="button button-cost" href="<?=$link2;?>" target="_blank" id="link-2">Купить</a>
+                <?php } else {;?>
+                  <p class="cost cost-full">Стоимость:<span class="unbroken">21 900р.</span></p>
+                  <a class="button button-cost" href="<?=$link2;?>" target="_blank">Купить</a>
+                  <?php } ;?>
               </div>
             </div>
           </div>
@@ -456,21 +469,31 @@
                 </ul>
               </div>
               <div class="packet-footer">
+              <?php if($now < $dates[1]) {;?>
                 <p class="cost cost-full">Стоимость:<span>32 900р.</span></p>
-                <p class="cost cost-sale">Скидка:<span id="sale-3">3 000р.</span></p>
-                <p class="cost cost-today">Стоимсоть сегодня:<span id="today-3">29 900р.</span></p><a class="button button-cost" href="https://shop.mv-centr.ru/?r=ordering/cart/as1&amp;id=347&amp;clean=true&amp;lg=ru" target="_blank" id="link-3">Купить</a>
+                <p class="cost cost-sale">Скидка:<span id="sale-3"><?=$sale3;?></span></p>
+                <p class="cost cost-today">Стоимость сегодня:<span id="today-3"><?=$today3;?></span></p>
+                <a class="button button-cost" href="<?=$link3;?>" target="_blank" id="link-3">Купить</a>
+                <?php } else {;?>
+                  <p class="cost cost-full">Стоимость:<span class="unbroken">32 900р.</span></p>
+                  <a class="button button-cost" href="<?=$link3;?>" target="_blank">Купить</a>
+                  <?php } ;?>
               </div>
             </div>
           </div>
         </div>
+        <?php if($now < $dates[2]):;?>
         <div class="prepayment">
           <h4 class="prepayment-title">Акция!!!</h4>
-          <p class="prepayment-text">Платите 1 000р., бонусом получаете <span id="prepayment-bonus">1 000р. </span><br/>На счет зачисляется <span id="prepayment-credited">2 000р.</span></p><a class="button" href="https://shop.mv-centr.ru/?r=ordering/cart/as1&amp;id=350&amp;clean=true&amp;lg=ru" target="_blank" id="prepayment-link">Оплатить 1 000р.</a>
+          <p class="prepayment-text">Платите 1 000р., бонусом получаете <span id="prepayment-bonus">1 000р. </span><br/>На счет зачисляется <span id="prepayment-credited">2 000р.</span></p><a class="button" href="<?=$prepLink;?>" target="_blank" id="prepayment-link">Оплатить 1 000р.</a>
         </div>
+        <?php endif;?>
+      <?php if($now < $dates[1]):;?>
         <div class="timer">
           <h4 class="timer-title">Скидка уменьшится через:</h4>
           <div class="clock"></div>
         </div>
+        <?php endif;?>
       </div>
     </section>
     <section id="author">
