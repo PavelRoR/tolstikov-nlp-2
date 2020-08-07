@@ -13,16 +13,14 @@ $(document).ready(function () {
             scrollTop: g
         }, 1500)
     });
-    // $('.button-up').fancybox();
-    $('.button-up').magnificPopup({
-        type: 'inline',
-        midClick: true, // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
-        mainClass: 'mfp-fade'
-    });
-    $('.master-class-title').click(function () {
-        $('.master-class-title').removeClass('active');;
-        $('.master-class-container').slideUp(500);
-        $(this).addClass('active').next().slideDown(500);
+    $('.module-title').click(function () {
+        if (!$(this).hasClass('active')) {
+
+            $(this).addClass('active').next().slideDown(500);
+        }
+        else {
+            $(this).removeClass('active').next().slideUp(500)
+        }
     });
     $('#video-revs, #text-revs').owlCarousel({
         loop: true,
